@@ -1,0 +1,53 @@
+So, now I will head on over to one of our cloud servers.
+
+Install Git.
+- sudo yum -y install git
+After a few moments, Git will be finished installing.
+
+Verify the Git installation.
+- git --version
+
+Configuring your name and email.
+- git config --global user.name "Camilo Astros"
+- git config --global user.email camilo.mail@gmail.com
+
+Setting up private key, creating key pair to authenticate to the remote repository from your local machine.
+- sudo ssh-keygen -t rsa -b 4096
+//now I'm going to head for to github.com to add the public key in the suitable section.
+//Once you're logged in you can scroll right up and pick in your avatar to execute the previous step.
+
+Making Changes
+- git clone <repository_url> //to have a git copy of your repository
+- git init //Initialize your repository 
+- git status //Another really useful command to verify the current state of your local repository.
+
+//So, now I'll show you what to do whn you're actually ready to make a change to your source code.
+//Whenever you want to actually make changes to source code, there's a 3 steps that you need to go through in order to get those changes.
+
+- git add . or -A or <file>
+//To stage the changes for commit.
+
+- git commit -m "message describing the change"
+//You're ready to commit those changes.
+// All you're doing is adding the changes into your local copy of the Git repo.
+
+-git push <remote name>origin <branch name>main
+//Now you're ready to pushing the changes to the remote repository.
+
+BRANCHES AND TAGS
+ Different versions of code.
+- git branch
+- git checkout
+- git checkout -b
+
+- git tag
+- git tag <tag_name>
+
+PULL REQUESTS
+
+
+
+
+
+
+
