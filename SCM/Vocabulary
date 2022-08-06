@@ -1,0 +1,22 @@
+INTRODUCTION
+
+- In many ways, this is the first part that needs to be in place before We can go on to next steps.
+  SCM is sort of the core of a software developer's daily workflow. All code changes that developers are making to the code base are tracked in SCM.
+
+- SCM = Source Control Management
+- Pipeline 
+- Furtheremore, SCM can be used to kick off other pieces of automation.
+
+- SCM server can notify our CI Server when there has been a code change that need to be built.
+
+- To moving forward, You need a basic understanding of a Git basic workflow.
+  
+  - Clonning: Pulling down a copy of source code from the remote repo.
+  - Adding: Once you've made a change on your source code, You need to add that changes in order to the stage it for next commit.
+  - Commiting: Confirm your changes to be ready.
+  - Pushing: Take the local commits that you have made against of the Git repository.
+  - Branching: Many Dev teams, as a best practice, keep separete groups of changes within individual branches.
+  - Merging: Ready to be merged in the main line
+  - Pull Request: Feature to allow review prior to a merge.
+  
+-It's important to have a brief overview of what those steps are.
