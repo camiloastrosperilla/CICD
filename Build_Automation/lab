@@ -1,0 +1,3 @@
+- Have a build task that can be called to execute the entire build process
+- Execute some automated tests
+- Package the code and its dependencies into a zip archive called dist/trainSechedule.zip
