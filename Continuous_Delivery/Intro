@@ -42,3 +42,4 @@ JENKINSFILE
 AUTOMATED DEPLOYMENT IN A PIPELINE
   - Define Stages for stages of the CD.
   - Then we need to define the steps or tasks for every stage.
+
