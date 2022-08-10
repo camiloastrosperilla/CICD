@@ -1,0 +1,48 @@
+- The Practice of frequently merging code changes
+
+BUT frequent merges cause difficulties:
+  - What if the code doesn't compile after a merge?
+  - What if someone broke something?
+  - It would be a lot of work to check these things on every merge
+  
+  The solution: automate it!
+  
+AUTOMATION_SERVER: JENKINS
+
+- INSTALLATION
+
+$ sudo wget -O /etc/yum.repos.d/jenkins.repo http://pkg.jenkins.ci.org/redhat-stable/jenkins.repo
+$ sudo yum -y install jenkins
+$ sudo cat /var/lib/jenkins/secrets/initialAdminPassword
+
+- CONFIGURATION
+  - The configuration which controls what a piece of Jenkins automation does and when it executes is called a project.
+   JENKINS-PROJECTS = JENKINS-JOBS
+  
+  - Create Item
+    project freestyle
+  
+    - Sourcer Control Management
+      GIT: https://github.com/camiloastrosperilla/cicd-pipeline-train-schedule-jenkins.git
+      
+    - Branches to Build: master
+    
+    - Build: Tasks: build
+    
+    - Invoke Gradle Script
+      / Use gradle wrapper
+      
+    - post build actions
+      files to archive: dist/trainSchedule.zip
+      
+WEBHOOKS
+  - Are event notifications made from one application to another over http.
+  - Example of WEBHOOKS are GitHooks
+  - A really good example is for instance how Git Server notify to Jenkins server whenever there is a change made to the source code in the 
+    Github repository.
+  
+
+
+  
+
+
