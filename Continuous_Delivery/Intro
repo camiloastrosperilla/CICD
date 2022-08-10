@@ -1,0 +1,44 @@
+JENKINS PIPELINE
+  - Is a collection of jenkins plugins that support doing Continuous Delivery.
+  - Is it takes source code through a pipeline from source code all the way to production deployment.
+  - Pipelines adheres to the best practice of infrastructure as code.
+  
+JENKINSFILE
+  - A pipeline is implemented in a file that is kept in a source control along with the rest of the application code. This file is called JENKINSFILE
+  
+  - Pipelines has a Domain-Specific-Language(DSL) that is used to define the pipeline logic.
+  - There are two styles of pipelines syntax you can use (You choose one or the other).
+    - SCRIPT
+    - DECLARATIVE
+
+  Pipeline Stages: //Are large pieces of the CD process
+    Build the code
+    Test the code
+    Deploy to Staging
+    Deploy to Production
+    
+    - Stages are made up by steps:
+    Pipeline Steps: //Are the individual tasks that make up each stage
+      Execute a command
+      Copy files to a server
+      Restart a Service
+      Wait for input from a human
+      
+  EXAMPLE:
+  
+   pipeline {
+    agent any
+    stages {
+        stage('Build') {
+            steps {
+                echo 'Running build automation'
+                sh './gradlew build --no-daemon'
+                archiveArtifacts artifacts: 'dist/trainSchedule.zip'
+            }
+        }
+    }
+}
+
+AUTOMATED DEPLOYMENT IN A PIPELINE
+  - Define Stages for stages of the CD.
+  - Then we need to define the steps or tasks for every stage.
