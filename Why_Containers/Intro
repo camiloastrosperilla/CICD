@@ -1,0 +1,39 @@
+WHY CONTAINERS:
+  - We can do continuos deployment with the current architecture.
+  
+  // What about scaling?
+  // What if some changes the server?
+  // Can we be confident our testing matching production?
+  
+  IMAGE: Package of the software and everything it needs in order to run.
+  CONTAINER: An instance of an inage.
+  
+  Building and Running with Docker
+  - Dockerfile
+  - docker build -t <docker_username/image_name>
+  - docker run -d <docker_username/image_name>
+  
+  - docker ps
+  - docker stop <container_id>
+  
+  DOCKER REGISTRY  //Example: hub.docker.com
+  - Aplace to store image
+  - Once you docker build an image, you can push it to a registry.
+  - Then you can docker run
+  - Authentication: docker login --username=<hub-username> --email=<hub-email>
+  
+  BUILDING A DOCKERFILE
+    - FROM: This define the parent image.
+    - WORKDIR: To establish working directory.
+    - COPY
+    - RUN: Execute the command into the container image.
+  
+  DEPLOYING DOCKER CONTAINER
+    - Jenkins produces a Docker image with the new code
+    - Jenkins pushes the new image to docker hub
+    - Jenkins pulls the new image on the production server
+    - Jenkins stops the container running the old code 
+    - Jenkins runs docker run on the server to run the new image
+  
+  
+  
